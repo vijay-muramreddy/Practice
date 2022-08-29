@@ -1,0 +1,21 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=3.0.0"
+    }
+  }
+}
+provider "azurerm" {
+  features {}
+
+subscription_id = "627f32d1-b523-4860-ba18-886b5b2773e9"
+client_id       = "20ee5554-29dd-4c01-9f13-75023d581d58"
+client_secret   = "Mbg8Q~.xXz6eJ3vJ1E2lshGG3NM2.roL1sg8qa.K"
+tenant_id       = "2f16a741-bc3a-42ec-831e-fda5267388cf"
+
+}
+resource "azurerm_resource_group" "practice" {
+  name     = "rg_practice"
+  location = "East US"
+}
